@@ -30,6 +30,7 @@ jooq {
                         name = "org.jooq.meta.extensions.ddl.DDLDatabase"
                         properties.add(Property().withKey("scripts").withValue("src/main/resources/db/changelog/*.sql"))
                         properties.add(Property().withKey("sort").withValue("alphanumeric"))
+                        properties.add(Property().withKey("defaultNameCase").withValue("lower")) //for PostgreSQL
                     }
 
                     generate.apply {
